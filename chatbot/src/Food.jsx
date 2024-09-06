@@ -40,10 +40,15 @@ const Food = () => {
   }
   return (
     <>
-      <div className="flex flex-col justify-center mt-1 items-center bg-slate-700 p-4 rounded-lg shadow-lg  mx-auto  border  border-gray-600 w-[100%]">
-        <div className="text-3xl font-bold text-white tracking-wide my-4 text-center mx-[200px]">
+      <div className="flex flex-col justify-center mt-1 items-center bg-slate-700 p-4 rounded-lg shadow-lg  mx-auto  border  border-gray-600 w-[100%] bg-opacity-80">
+        <div className="text-3xl font-bold text-white tracking-wide my-4 text-center mx-[200px] ">
           Meal Recommendation
         </div>
+
+        <p className="text-slate-500 w-[400px] text-sm  hover:text-slate-300 hover:font-bold">
+          Provide with the disease or condition you'd like to get medicine
+          recommendations and precautions for
+        </p>
 
         <div className="flex flex-col mx-2 pt-[100px] items-center">
           <textarea

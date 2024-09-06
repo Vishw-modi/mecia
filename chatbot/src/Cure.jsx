@@ -35,14 +35,13 @@ const Cure = () => {
 
   return (
     <>
-      <div className="flex flex-col justify-center mt-1 items-center bg-slate-700 p-4 rounded-lg shadow-lg  mx-auto  border w-[40rem] border-gray-600 max-w-3xl">
+      <div className="flex flex-col justify-center mt-1 items-center bg-slate-700 p-4 rounded-lg shadow-lg  mx-auto  border h-[35rem] w-[60rem] border-gray-600 max-w-3xl bg-opacity-70">
         <div className="text-3xl font-bold text-white tracking-wide mb-11 text-center">
           Home Cure And Precaution
         </div>
-        <p className="text-slate-500 w-[400px] text-sm hover:text-slate-300">
+        <p className="text-slate-500 w-[400px] text-sm hover:text-slate-300 hover:font-bold">
           Provide with the disease or condition you'd like to get medicine
           recommendations and precautions for
-          <br /> Note : If you think that the
         </p>
         <div className="flex mx-2  items-center">
           <textarea
@@ -59,7 +58,7 @@ const Cure = () => {
             type="number"
             id="quantity"
             name="quantity"
-            className="w-[50px] bg-white text-slate-800"
+            className="w-[50px] bg-white text-slate-800 rounded-md"
             min="1"
             max="100"
             onChange={(e) => {

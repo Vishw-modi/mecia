@@ -16,7 +16,7 @@ function Medicines() {
       id: 1,
       name: "Aspirin",
       description: "Used to reduce fever, pain, and inflammation.",
-      price: "5.00",
+      price: "5.00 ",
       imageUrl: "https://m.media-amazon.com/images/I/71mtKP91HHL._SL1300_.jpg",
     },
     {
@@ -236,11 +236,11 @@ function Medicines() {
 
   return (
     <div
-      className="overflow-y-auto mx-[10px] bg-slate-800"
+      className="overflow-y-auto mx-[10px] bg-slate-800 bg-opacity-60"
       style={{
         // position: "relative",
         // top: "10vh", // This ensures the content starts after 10% of the viewport height
-        height: "90vh",
+        height: "80vh",
         border: "1px solid #ccc",
         borderRadius: "10px",
         overflow: "auto",
@@ -249,7 +249,13 @@ function Medicines() {
       }}
     >
       {" "}
-      <h1 className="pb-[10px]">Common Medicines</h1>
+      <h1 className="pb-[10px]">
+        <strong>Common Medicines</strong>
+        <p className=" text-sm font-bold">
+          (Also take note that these medicines have their respective side
+          effects too so its safe to use them after prescribed by the doctor)
+        </p>
+      </h1>
       <div
         style={{
           display: "grid",
@@ -259,7 +265,7 @@ function Medicines() {
       >
         {medicines.map((medicine, index) => (
           <div
-            className="bg-black"
+            className="bg-black bg-opacity-50"
             key={index}
             style={{
               border: "1px solid #ccc",
@@ -282,27 +288,14 @@ function Medicines() {
             />
             <h2>{medicine.name}</h2>
             <p>
-              <strong>Description:</strong>
+              <strong>Description: </strong>
 
               {medicine.description}
             </p>
 
             <p>
-              <strong>Price:</strong> {medicine.price}
+              <strong>Base Price:</strong> {medicine.price}
             </p>
-            <button
-              onClick={() => setShowForm(true)}
-              style={{
-                backgroundColor: "#007bff",
-                color: "#fff",
-                padding: "10px 20px",
-                borderRadius: "5px",
-                border: "none",
-                cursor: "pointer",
-              }}
-            >
-              Buy Now
-            </button>
           </div>
         ))}
       </div>
